@@ -1,0 +1,27 @@
+version: '2'
+services:
+  atrix-elasticsearch:
+    build:
+      context: .
+      args:
+        - NPM_TOKEN=${NPM_TOKEN}
+    image: trigo/atrix-elasticsearch:latest
+    command: 'yarn run test'
+    environment:
+      - ATRIX_ELASTICSEARCH_DATASOURCE_M1_CONFIG_CLIENT_CONNECTIONSTRING=elasticsearch:9200/
+      - NODE_ENV=test
+      - NPM_TOKEN
+      - I_WANT_TEST_LOGGING=1
+    networks:
+      - atrix-elasticsearch_test
+    depends_on:
+      - elasticsearch
+
+  elasticsearch:
+    image: elasticsearch
+    networks:
+      - atrix-elasticsearch_test
+
+networks:
+  atrix-elasticsearch_test:
+    driver: bridge

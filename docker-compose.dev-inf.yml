@@ -1,0 +1,13 @@
+version: '2'
+services:
+  elasticsearch:
+    image: elasticsearch 
+    networks:
+      - atrix-elasticsearch_test
+    environment:
+    ports:
+      - 9200:9200
+
+networks:
+  atrix-elasticsearch_test:
+    driver: bridge
