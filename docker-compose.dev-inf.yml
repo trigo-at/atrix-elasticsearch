@@ -1,10 +1,9 @@
 version: '2'
 services:
   elasticsearch:
-    image: elasticsearch 
+    image: elasticsearch
     networks:
       - atrix-elasticsearch_test
-    environment:
     ports:
       - 9200:9200
 

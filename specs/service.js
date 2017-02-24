@@ -10,6 +10,7 @@ const svc = new atrix.Service('elasticsearch', {
 		m1: {
 			type: 'elasticsearch',
 			config: {
+				connectionString: 'http://localhost:9200'
 			},
 		},
 	},

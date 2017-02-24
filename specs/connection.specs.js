@@ -26,4 +26,9 @@ describe('loads datasources into service', () => {
 	it('connects all and expose as service.dataConnections', async () => {
 		expect(atrix.services.elasticsearch.dataConnections.m1).to.be.an('object');
 	});
+
+	it('exposes initialized elasticsearch client', () => {
+		const client = 	atrix.services.elasticsearch.dataConnections.m1.client;
+		expect(client).to.be.an('object');
+	});
 });

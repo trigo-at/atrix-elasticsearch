@@ -47,5 +47,9 @@ publish: build
 		exit $$EXIT_CODE
 
 
+dev-inf-up:
+	docker-compose -f docker-compose.dev-inf.yml up -d
 
+dev-inf-down:
+	docker-compose -f docker-compose.dev-inf.yml down -d
 
