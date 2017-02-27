@@ -66,7 +66,7 @@ const svc = new atrix.Service('mongoose', {
             // connection configuration
             config: 
                 // database connection string, sommaseperated to connnect several nodes
-                connectionString: 'http://es-01:9200,http://es-02:9200, 
+                connectionString: 'http://es-01:9200,http://es-02:9200',
             },
         },
         m2: {
