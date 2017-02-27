@@ -4,7 +4,7 @@
 /* eslint no-unused-expressions: 0, arrow-body-style: 0 */
 
 const { expect } = require('chai');
-// const bb = require('bluebird');
+const elasticsearch = require('elasticsearch');
 
 require('./service');
 const atrix = require('@trigo/atrix');
@@ -30,5 +30,10 @@ describe('loads datasources into service', () => {
 	it('exposes initialized elasticsearch client', () => {
 		const client = 	atrix.services.elasticsearch.dataConnections.m1.client;
 		expect(client).to.be.an('object');
+	});
+	it('client can access the cluster', async () => {
+		const client =	atrix.services.elasticsearch.dataConnections.m1.client;
+		const info = await client.info();
+		expect(info.tagline).to.equal('You Know, for Search');
 	});
 });

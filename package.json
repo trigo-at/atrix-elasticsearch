@@ -1,10 +1,13 @@
 {
   "name": "@trigo/atrix-elasticsearch",
   "version": "0.0.0",
+  "engines": {
+    "node": ">=7.6.0"
+  },
   "description": "Elasticsearch intigration into atrix microservice framework",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=test mocha --timeout 30000 --trace-warnings --harmony-async-await $(find . -name '*.specs.js' -not -path './node_modules/*')",
+    "test": "NODE_ENV=test mocha --timeout 30000 --trace-warnings $(find . -name '*.specs.js' -not -path './node_modules/*')",
     "lint": "eslint lib specs",
     "yarn": "yarn install"
   },
