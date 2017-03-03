@@ -9,6 +9,7 @@ services:
     command: 'yarn run test'
     environment:
       - ATRIX_ELASTICSEARCH_DATASOURCE_M1_CONFIG_CONNECTIONSTRING=elasticsearch:9200/
+      - TEST_ELASTICSEARCH=elasticsearch:9200/
       - NODE_ENV=test
       - NPM_TOKEN
       - I_WANT_TEST_LOGGING=1
