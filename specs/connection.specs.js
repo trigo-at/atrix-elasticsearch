@@ -26,10 +26,7 @@ describe('loads datasources into service', () => {
 		expect(atrix.services.elasticsearch.dataConnections.m1).to.be.an('object');
 	});
 
-	it('exposes initialized elasticsearch client', () => {
-		const client = 	atrix.services.elasticsearch.dataConnections.m1.client;
-		expect(client).to.be.an('object');
-	});
+
 	it('client can access the cluster', async () => {
 		const client =	atrix.services.elasticsearch.dataConnections.m1.client;
 		const info = await client.info();

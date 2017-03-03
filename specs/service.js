@@ -11,6 +11,7 @@ const svc = new atrix.Service('elasticsearch', {
 			type: 'elasticsearch',
 			config: {
 				connectionString: 'http://localhost:9200',
+				indexTemplateDir: path.join(__dirname, './templates'),
 			},
 		},
 	},
