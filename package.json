@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/trigo-at/atrix-elasticsearch#readme",
   "devDependencies": {
-    "@trigo/atrix": "^0.10.0",
+    "@trigo/atrix": "^0.11.0",
     "@trigo/eslint-config-trigo": "^3.3.0",
     "chai": "^3.5.0",
     "eslint": "^3.19.0",
