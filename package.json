@@ -1,6 +1,6 @@
 {
   "name": "@trigo/atrix-elasticsearch",
-  "version": "0.4.4",
+  "version": "1.0.0",
   "engines": {
     "node": ">=7.6.0"
   },
@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/trigo-at/atrix-elasticsearch#readme",
   "devDependencies": {
-    "@trigo/atrix": "^1.2.0",
+    "@trigo/atrix": "^6.0.0-7",
     "@trigo/eslint-config-trigo": "^3.3.0",
     "chai": "^3.5.0",
     "eslint": "^3.19.0",

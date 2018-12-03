@@ -5,7 +5,8 @@ const path = require('path');
 
 atrix.configure({ pluginMap: { elasticsearch: path.join(__dirname, '../') } });
 
-const svc = new atrix.Service('elasticsearch', {
+atrix.addService({
+	name: 'elasticsearch',
 	dataSource: {
 		m1: {
 			type: 'elasticsearch',
@@ -16,6 +17,4 @@ const svc = new atrix.Service('elasticsearch', {
 		},
 	},
 });
-
-atrix.addService(svc);
 

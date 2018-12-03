@@ -5,6 +5,11 @@
 
 **Elasticsearch plugin for the atrix miscroservice framework**
 
+## Compatibility
+
+`atrix-elasticsearch < 1.0.0` works with `atrix < 6.0.0`
+`atrix-elasticsearch >= 1.0.0` works with `atrix >= 6.0.0`
+
 ## Features
 
 * Connection setup
@@ -47,7 +52,8 @@ module.exports = async (req, reply, service) => {
 const atrix = require('@trigo/atrix');
 const path = require('path');
 
-const svc = new atrix.Service('mongoose', {
+const svc = atrix.addService({
+	name: 'mongoose', 
     endpoints: {
         http: {
             // declare port to bind
@@ -78,12 +84,6 @@ const svc = new atrix.Service('mongoose', {
         },
     },
 });
-
-// register service in atrix
-atrix.addService(svc);
-
-// setup http endpoint
-svc.endpoints.add('http');
 
 // start service. 
 // This will wait for the elasticsearch connection to be available waits for cluster state 'yellow' before starting up. 
