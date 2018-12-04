@@ -9,7 +9,15 @@
   "scripts": {
     "test": "NODE_ENV=test mocha --timeout 30000 --trace-warnings $(find . -name '*.specs.js' -not -path './node_modules/*')",
     "lint": "eslint lib specs",
-    "yarn": "yarn install"
+    "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
+    "precommit": "lint-staged",
+    "prettify": "prettier --write '**/*.{js,jsx}'"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "prettier",
+      "git add"
+    ]
   },
   "repository": {
     "type": "git",
@@ -23,23 +31,26 @@
   "homepage": "https://github.com/trigo-at/atrix-elasticsearch#readme",
   "devDependencies": {
     "@trigo/atrix": "^6.0.0-7",
-    "@trigo/eslint-config-trigo": "^3.3.0",
-    "chai": "^3.5.0",
-    "eslint": "^3.19.0",
-    "eslint-config-airbnb-base": "^11.1.3",
+    "chai": "^4.2.0",
+    "eslint": "^5.9.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-config-trigo": "^6.2.0",
     "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-mocha": "^4.9.0",
-    "mocha": "^3.2.0",
-    "nodemon": "^1.11.0",
-    "prettier-eslint-cli": "^3.3.0",
+    "eslint-plugin-mocha": "^5.2.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "husky": "^1.2.0",
+    "lint-staged": "^8.1.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.7",
+    "prettier": "^1.15.3",
     "supertest": "^3.0.0"
   },
   "dependencies": {
     "async-retry": "^0.3.0",
-    "bluebird": "^3.5.0",
+    "bluebird": "^3.5.3",
     "elasticsearch": "^13.0.0-rc2",
     "joi": "^10.2.2",
     "ramda": "^0.23.0",
-    "uuid": "^3.0.1"
+    "uuid": "^3.3.2"
   }
 }
