@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/trigo-at/atrix-elasticsearch#readme",
   "devDependencies": {
-    "@trigo/atrix": "^6.0.0-7",
+    "@trigo/atrix": "^6.0.0-12",
     "chai": "^4.2.0",
     "eslint": "^5.9.0",
     "eslint-config-prettier": "^3.3.0",
@@ -49,7 +49,7 @@
     "async-retry": "^0.3.0",
     "bluebird": "^3.5.3",
     "elasticsearch": "^13.0.0-rc2",
-    "joi": "^10.2.2",
+    "joi": "^14.3.0",
     "ramda": "^0.23.0",
     "uuid": "^3.3.2"
   }
