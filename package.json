@@ -46,9 +46,9 @@
     "supertest": "^3.0.0"
   },
   "dependencies": {
+    "@elastic/elasticsearch": "^7.5.0",
     "async-retry": "^0.3.0",
     "bluebird": "^3.5.3",
-    "elasticsearch": "^13.0.0-rc2",
     "joi": "^14.3.0",
     "ramda": "^0.23.0",
     "uuid": "^3.3.2"

@@ -29,6 +29,6 @@ describe('loads datasources into service', () => {
     it('client can access the cluster', async () => {
         const client = atrix.services.elasticsearch.dataConnections.m1.client;
         const info = await client.info();
-        expect(info.tagline).to.equal('You Know, for Search');
+        expect(info.body.tagline).to.equal('You Know, for Search');
     });
 });

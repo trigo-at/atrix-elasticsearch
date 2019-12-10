@@ -1,7 +1,9 @@
 version: '2'
 services:
   elasticsearch:
-    image: elasticsearch:5
+    image: elasticsearch:7.5.0
+    environment:
+      - discovery.type=single-node
     networks:
       - atrix-elasticsearch_test
     ports:

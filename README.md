@@ -24,7 +24,7 @@ npm install -S @trigo/atrix
 # install elasticsearch plugin
 npm install -S @trigo/atrix-elasticsearch
 
-# No need to install elasticsearch itself!
+# No need to install @elastic/elasticsearch itself!
 ```
 ## Configuraton & Usage
 
@@ -89,3 +89,12 @@ const svc = atrix.addService({
 // This will wait for the elasticsearch connection to be available waits for cluster state 'yellow' before starting up. 
 svc.start();
 ```
+
+## Running the tests
+
+Start the dependencies with `make dev-inf-up` and run the tests with `make test`.
+
+To simulate a CI test run you can use the `make ci-test` command.
+
+Authentication test is disabled by default, to enable them execute the tests with the following command line:
+`TEST_SECURDED_ELASTICSEARCH=<Secured ES Url> TEST_SECURDED_ELASTICSEARCH_USER=<user> TEST_SECURDED_ELASTICSEARCH_PASSWORD=<password> make test`

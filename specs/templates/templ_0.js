@@ -7,19 +7,17 @@ module.exports = {
         number_of_replicas: 0,
     },
     mappings: {
-        _default_: {
-            dynamic_templates: [
-                {
-                    base: {
-                        mapping: {
-                            index: 'not_analyzed',
-                        },
-                        match: '*',
-                        match_mapping_type: '*',
+        dynamic_templates: [
+            {
+                base: {
+                    mapping: {
+                        type: 'keyword',
                     },
+                    match: '*',
+                    match_mapping_type: '*',
                 },
-            ],
-        },
+            },
+        ],
     },
     aliases: {},
 };
